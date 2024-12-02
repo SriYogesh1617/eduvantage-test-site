@@ -5043,414 +5043,62 @@ blockquote cite::before {
 /* First Section */
 /* -------------------------------------------------------------*/
 
+/* General styles for Page 1 */
 #page1 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vmin;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
   width: 100%;
-  padding: 2rem 2rem;
-  overflow: hidden;
-  /* background-color: #000; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrollbars */
+  background: #000; /* Optional: Set background color to black */
+  box-sizing: border-box;
 }
 
 #centerpage1 {
-  max-height: 80vmin;
   width: 100%;
-  color: #13A0A4;
+  height: 100%; /* Full height for center container */
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  right: 0;
-  left: 0;
-  padding: 3vw 0;
-  border-bottom: 1.5px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, #a6dcb9, #00fffc, #13A0A4);
-  overflow: visible;
-  gap: 3vmin;
-}
-
-/* #video-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 40px;
-    height: 80vmin;
-    width: 100%;
-    margin-top: 5vmax;
-    justify-content: center;
-    align-items: center;
-  } */
-
-#video-container video {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  /* border-radius: 40px; */
-}
-
-#centerpage1 h1 {
-  margin-top: -1vmax;
-  font-size: 5rem;
-  font-weight: 500;
-  line-height: 5.5rem;
-  text-align: right;
-  color: #13A0A4;
-}
-
-
-
-#left {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 45%;
-  height: 100%;
-  color: #13A0A4;
-  bottom: 0;
-}
-
-#right {
-  display: flex;
-  width: 50%;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  position: relative;
+  margin-top: 2rem; /* Allows precise positioning of child elements */
 }
 
-
-.centerpage1-grid-1 {
-  display: grid;
-  grid-template-columns: 1fr 50px 1fr;
-  gap: 8px;
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Ensures video scales properly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevents excess scroll */
+  margin-top: 2rem; /* Moves the video container slightly down */
 }
 
-.centerpage1-grid-2 {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  padding: 8px 200px;
+.video-container video {
+  width: 100%; /* Ensures the video fills the width */
+  height: 100%; /* Ensures the video fills the height */
+  object-fit: cover; /* Maintains aspect ratio while covering the container */
 }
 
-.page1-grid-container {
+.image-container {
   width: 100%;
   height: auto;
-  margin-bottom: 3vmax;
-}
-
-
-.centerpage1-box {
-  border-radius: 10px;
   display: flex;
-  min-height: 60px;
-  position: relative;
-  border: 1.5px solid #A8DDBA;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.centerpage1-box h2 {
-  font-size: 24px;
-  font-weight: 600;
   justify-content: center;
   align-items: center;
-  text-align: left;
-  margin: 5px 10px;
-
-}
-
-.centerpage1-box p {
-  font-size: 14px;
-  font-weight: 400;
-  color: #777;
-  text-align: left;
-  white-space: normal;
-  max-width: 280px;
-  line-height: 1.3;
-  margin: 5px 10px;
-}
-
-
-
-.card-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  /* height: 100%; */
   overflow: hidden;
+  margin-top: 2rem;
 }
 
-.heroSection-card {
-  border-radius: 20px;
-  width: 350px;
-  position: relative;
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image scales properly */
   display: block;
-  background-image: center;
-  position: relative;
-  border: 1.5px solid #a6dcb9;
-}
-
-
-.heroSection-img {
-  width: 100%;
-  height: 100%;
-
-}
-
-.heroSection-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  /* position: relative; */
-  display: flex;
-}
-
-.arrow-circle {
-  background: linear-gradient(45deg, #a6dcb9, #13A0A4);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.arrow-circle span {
-  color: white;
-  font-size: 18px;
-}
-
-.heroSection-card:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 43%;
-  height: 39%;
-  border-radius: 40px 0px 15px 0;
-  background: whitesmoke;
-}
-
-#Hiring {
-  display: inline;
-  /* height: 1vmax; */
-  font-size: 4.5vmax;
-  font-weight: 600;
-  /* line-height: .8; */
-  padding: 4px 1rem;
-  background: linear-gradient(45deg, #a6dcb9, #00fffc, #13A0A4);
-  color: whitesmoke;
-  border-radius: 50px;
-}
-
-#Assessing {
-  display: inline;
-  font-size: 4.5vmax;
-  font-weight: 600;
-  /* line-height: .8; */
-  padding: 4px 1rem;
-  background: linear-gradient(45deg, #a6dcb9, #00fffc, #13A0A4);
-  color: whitesmoke;
-  border-radius: 50px;
-}
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  #page1 {
-    padding: 2rem 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #centerpage1 {
-    flex-direction: column;
-    align-items: center;
-    gap: 3vmin;
-    padding: 2rem 1rem;
-    height: auto;
-    /* justify-content: center; */
-    border-bottom: 1.5px solid;
-    width: 100%;
-  }
-
-  #centerpage1 h1 {
-    font-size: 3.5rem;
-    line-height: 4rem;
-    text-align: center;
-  }
-
-  #left {
-    width: 100%;
-    gap: 2vmax;
-    align-items: center;
-  }
-
-  #right {
-    width: 100%;
-    text-align: center;
-  }
-
-  .centerpage1-grid-1 {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .centerpage1-grid-2 {
-    grid-template-columns: 1fr;
-    padding: 8px;
-  }
-
-  .centerpage1-box h2 {
-    font-size: 20px;
-  }
-
-  .centerpage1-box p {
-    font-size: 14px;
-    max-width: 90%;
-    text-align: center;
-  }
-
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .heroSection-card {
-    width: 80%;
-    max-width: 400px;
-  }
-
-  #Assessing,
-  #Hiring {
-    font-size: 4rem;
-    padding: 0.5rem 1.5rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 767px) {
-  #page1 {
-    display: flex;
-    /* padding: 0 0; */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vmax;
-    overflow-y: scroll;
-    background: #000;
-  }
-
-  #centerpage1 {
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    overflow-y: scroll;
-    padding: 0;
-    background-color: #007F83;
-
-  }
-
-  #centerpage1 h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    text-align: center;
-    flex-wrap: wrap;
-  }
-
-  #left {
-    display: flex;
-    width: 100%;
-    height: 100vmax;
-    /* overflow-y: scroll; */
-    /* gap: 1.5vmax; */
-    flex-direction: column;
-  }
-
-  #right {
-    width: 100%;
-    text-align: center;
-  }
-
-  .centerpage1-grid-1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "item1 item2"
-      "item3 item3";
-    gap: 10px;
-    width: 100%;
-  }
-
-  .item3 {
-    grid-column: span 2;
-    /* Span across both columns */
-  }
-
-  .centerpage1-grid-2 {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 8px;
-  }
-
-  .centerpage1-box h2 {
-    font-size: 18px;
-  }
-
-  .centerpage1-box p {
-    font-size: 14px;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    width: 100vmin;
-    /* flex-wrap: wrap; */
-    background-color: red;
-  }
-
-
-  #Assessing,
-  #Hiring {
-    font-size: 2.3rem;
-    padding: .1rem .5rem;
-  }
-
-  .arrow-circle {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-  }
 }
 
 
